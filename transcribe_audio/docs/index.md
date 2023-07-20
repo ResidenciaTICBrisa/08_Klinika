@@ -1,4 +1,4 @@
-A busca por interações mais intuitivas e naturais com assistentes virtuais tem impulsionado o desenvolvimento de funcionalidades inovadoras. Nesse contexto, o presente código visa implementar uma solução que permite aos usuários realizar consultas ao chat GPT-4 utilizando comandos de voz. Para alcançar esse objetivo, a linguagem de programação escolhida é o Python, amplamente reconhecida pela sua versatilidade e facilidade de uso. Essa funcionalidade faz uso dos avançados modelos de inteligência artificial Whisper e GPT-4, desenvolvidos e disponibilizados pela OpenAI.
+O presente código visa implementar uma solução que permite aos usuários realizar consultas ao chat GPT-4 utilizando comandos de voz. Essa funcionalidade é obtida ao integrar uma solução existente de gravação e transcrição de áudio para texto (ver referências na seção de bibliografia). Para alcançar esse objetivo, a linguagem de programação escolhida é o Python, amplamente reconhecida por sua versatilidade e facilidade de uso. Essa funcionalidade faz uso dos modelos avançados de inteligência artificial Whisper e GPT-4, divulgados e disponibilizados pela OpenAI.
 
 Para a utilização dessa funcionalidade é preciso rodar os seguintes comandos para uso das bibliotecas:
 
@@ -111,3 +111,9 @@ if __name__ == "__main__":
 Ao executar o código, é possível interagir com o chat GPT-4 através de comandos de voz, fornecendo perguntas ou instruções. O assistente virtual processará o áudio, converterá em texto, enviará a consulta para o modelo GPT-4 e retornará a resposta gerada.
 
 Para mais informações consulte a documentação da [OpenAI](https://platform.openai.com/docs/introduction).
+
+## Bibliografia
+
+SEBASTIAN. **Voice to Text Made Easy: Implementing a Python App with OpenAI’s Whisper Speech-to-Text API**. Medium. Disponível em: <https://medium.com/codingthesmartway-com-blog/voice-to-text-made-easy-implementing-a-python-app-with-openais-whisper-speech-to-text-api-e8f415a5f737>. Acesso em: 20 jul. 2023.
+
+‌
