@@ -34,4 +34,4 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Consultas ao chat gpt 4 por comando de voz: index.md
+  - Consultas a inteligência artificial por comando de voz: index.md
