@@ -5,6 +5,8 @@ repo_url: "https://github.com/ResidenciaTICBrisa/08_Klinika"
 
 theme:
   name: material
+  logo: assets/klinika.svg
+  favicon: assets/klinika.svg
   features:
    - content.code.copy
   palette:
@@ -22,8 +24,6 @@ theme:
         icon: material/weather-sunny
         name: Trocar para o modo claro
 
-
-
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -34,4 +34,6 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Consultas a inteligência artificial por comando de voz: index.md
+  - Entregas: ./entregas/entregas.md
+  - Modelo transcrição áudio: transcricao_audio.md
+  - Scrum: ./scrum.md
