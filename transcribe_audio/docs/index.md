@@ -1,119 +1,78 @@
-O presente código visa implementar uma solução que permite aos usuários realizar consultas ao chat GPT-4 utilizando comandos de voz. Essa funcionalidade é obtida ao integrar uma solução existente de gravação e transcrição de áudio para texto (ver referências na seção de bibliografia). Para alcançar esse objetivo, a linguagem de programação escolhida é o Python, amplamente reconhecida por sua versatilidade e facilidade de uso. Essa funcionalidade faz uso dos modelos avançados de inteligência artificial Whisper e GPT-4, divulgados e disponibilizados pela OpenAI.
+# Página Inicial
 
-Para a utilização dessa funcionalidade é preciso rodar os seguintes comandos para uso das bibliotecas:
+## Introdução
 
-```python
-pip install openai
-pip install os
-pip install pyaudio
-pip install wave
-pip install load_dotenv
-pip install requests
-pip install json
-```
+Este repositório do GitHub Pages foi criado com o propósito de detalhar e registrar todo o trabalho em andamento no nosso projeto. Aqui, vamos compartilhar regularmente o progresso alcançado pelos membros da equipe, suas experiências e aprendizados, bem como a evolução contínua do projeto. A documentação tem como principal objetivo auxiliar no acompanhamento da equipe, mas também visa compartilhar o conhecimento adquirido com qualquer pessoa que acesse esta página.
 
-Inicialmente, é necessário importar as bibliotecas instaladas e em seguida definir a chave de API do OpenAI na variável OPENAI_API_KEY, que é armazenada de forma segura em um arquivo de ambiente (.env). Essa chave é utilizada para autenticar as solicitações à API do OpenAI.
+Na página inicial, você encontrará um breve resumo sobre o que é o projeto Klinika e uma lista dos colaboradores que estão formando a equipe.
 
-```python
-import openai
-import os
-import pyaudio
-import wave
-from dotenv import load_dotenv
-import requests
-import json
+## Sobre a Klinika
 
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = OPENAI_API_KEY
-```
+A Klinika está atualmente empenhada no desenvolvimento de um prontuário eletrônico com o objetivo de otimizar significativamente o processo de atendimento médico. Reconhecemos que já existem diversas opções de prontuários eletrônicos no mercado, mas nossa visão é oferecer uma solução abrangente e inovadora que aborde uma das principais preocupações dos médicos: o tempo e detalhamento necessários para preencher prontuários.
 
-A função record_audio é responsável por gravar o áudio do dispositivo por um determinado período de tempo, utilizando a biblioteca "PyAudio". Os parâmetros como formato de áudio, número de canais, taxa de amostragem e tamanho do "buffer" são configurados nessa função. Veja que o valor padrão para a duração, caso não informada na chamada da função, é 5 segundos.
+Nossa proposta é criar um prontuário eletrônico que reduza ao mínimo possível o esforço do médico durante o processo de preenchimento. Queremos simplificar a criação do prontuário, minimizando a quantidade de cliques necessários. Isso permitirá que os médicos realizem atendimentos de forma mais ágil e precisa, dedicando mais tempo aos pacientes.
 
-```python
-def record_audio(filename, duration=5):
-    FORMAT = pyaudio.paInt16
-    CHANNELS = 1
-    RATE = 16000
-    CHUNK = 1024
+A plataforma Klinka Web já estava em funcionamento. Atendendo ao pedido do cliente, estamos realizando uma migração tecnológica, passando de Angular para React. O foco principal da equipe é efetuar essa migração, corrigindo eventuais problemas existentes na plataforma anterior e, ao mesmo tempo, incorporando novas funcionalidades conforme as necessidades surgem.
 
-    audio = pyaudio.PyAudio()
-    stream = audio.open(format=FORMAT, channels=CHANNELS,
-                        rate=RATE, input=True,
-                        frames_per_buffer=CHUNK)
+Além do desenvolvimento das telas utilizando React, também implementamos uma solução de inteligência artificial para [transcrição de áudio](./transcribeAudio.md) que também se encontra na documentação.
 
-    print("Recording...")
 
-    frames = []
+## Colaboradores
 
-    for _ in range(0, int(RATE / CHUNK * duration)):
-        data = stream.read(CHUNK)
-        frames.append(data)
+Os integrantes deste projeto são estudantes da Universidade de Brasília, especificamente do campus FGA, todos matriculados no curso de Engenharia de Software e atualmente se encontram no 6º e 7º semestre. A seguir, você encontrará uma lista dos colaboradores, acompanhados de suas funções e respectivas contas no GitHub.
 
-    print("Finished recording")
+<div  class="HomeProfiles" style="justify-content: space-around; flex-wrap: wrap; display: flex;">
 
-    stream.stop_stream()
-    stream.close()
-    audio.terminate()
+<a href="https://github.com/analuizargds" target="_blank">
+    <figure>
+      <img  src="https://github.com/analuizargds.png" alt="Foto da Ana Luiza Rodrigues" width="110px" style="border-radius: 6%">
+      <figcaption style="font-weight: bold; color: #000000; font-size: 15px">
+        Ana Luiza <br>
+        (Product Manager)
+      </figcaption>
+    </figure>
+</a>
 
-    with wave.open(filename, 'wb') as wf:
-        wf.setnchannels(CHANNELS)
-        wf.setsampwidth(audio.get_sample_size(FORMAT))
-        wf.setframerate(RATE)
-        wf.writeframes(b''.join(frames))
-```
+<a href="https://github.com/PedroHenrique2077" target="_blank">
+    <figure>
+      <img  src="https://github.com/PedroHenrique2077.png" alt="Foto do Pedro Henrique" width="110px" style="border-radius: 6%">
+      <figcaption style="font-weight: bold; color: #000000; font-size: 15px">
+        Pedro Henrique <br>
+        (Líder Técnico)
+      </figcaption>
+    </figure>
+</a>
 
-Após a gravação do áudio, a função transcribe_audio realiza a transcrição do arquivo de áudio gravado utilizando o modelo de inteligência artificial Whisper da OpenAI. A transcrição resultante é retornada como texto.
+<a href="https://github.com/Izarias" target="_blank">
+    <figure>
+      <img  src="https://github.com/Izarias.png" alt="Foto do Pedro Izarias" width="110px" style="border-radius: 6%">
+      <figcaption style="font-weight: bold; color: #000000; font-size: 15px">
+        Pedro Augusto <br>
+        (Machine Learning)
+      </figcaption>
+    </figure>
+</a>
 
-```python
-def transcribe_audio(filename):
-    with open(filename, "rb") as audio_file:
-        transcript = openai.Audio.transcribe("whisper-1", audio_file)
-        return transcript["text"]
-```
+<a href="https://github.com/SamuelGSouza" target="_blank">
+    <figure>
+      <img  src="https://github.com/SamuelGSouza.png" alt="Foto do Samuel Gomes" width="110px" style="border-radius: 6%">
+      <figcaption style="font-weight: bold; color: #000000; font-size: 14px">
+        Samuel Gomes <br>
+        (Community Manager)
+      </figcaption>
+    </figure>
+</a>
 
-Em seguida, a função generate_response é utilizada para gerar a resposta do chat GPT-4 com base na pergunta ou comando do usuário. É realizada uma solicitação HTTP POST para a API do OpenAI, fornecendo o modelo GPT-4 e a mensagem do usuário. A resposta obtida é processada e a mensagem de saída é retornada.
+<a href="https://github.com/verabelucia" target="_blank">
+    <figure>
+      <img  src="https://github.com/verabelucia.png" alt="Foto da Vera Lucia" width="110px" style="border-radius: 6%">
+      <figcaption style="font-weight: bold; color: #000000; font-size: 15px">
+        Vera Lucia <br>
+        (Scrum Master)
+      </figcaption>
+    </figure>
+  </a>
 
-```python
-def generate_response(question):
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {OPENAI_API_KEY}"
-    }
-  
-    data = {
-        "model": "gpt-4",
-        "messages": [{"role": "user", "content": f"{question}"}],
-        "temperature": 0.7
-    }
-  
-    response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data)
-  
-    result = response.json()
-  
-    return result["choices"][0]["message"]["content"]
-```
 
-A função principal main coordena a execução do código. Primeiro, o áudio é gravado e salvo em um arquivo chamado "recorded_audio.wav". Em seguida, o áudio é transcrito e impresso na tela para verificação. Posteriormente, a função generate_response é chamada, passando a transcrição como entrada, e a resposta do chat GPT-4 é impressa na tela.
 
-```python
-def main():
-    audio_filename = "recorded_audio.wav"
-    record_audio(audio_filename)
-    transcription = transcribe_audio(audio_filename)
-    print("Transcription:", transcription)
-    response = generate_response(transcription)
-    print(response)
-if __name__ == "__main__":
-    main()
-```
-
-Ao executar o código, é possível interagir com o chat GPT-4 através de comandos de voz, fornecendo perguntas ou instruções. O assistente virtual processará o áudio, converterá em texto, enviará a consulta para o modelo GPT-4 e retornará a resposta gerada.
-
-Para mais informações consulte a documentação da [OpenAI](https://platform.openai.com/docs/introduction).
-
-## Bibliografia
-
-SEBASTIAN. **Voice to Text Made Easy: Implementing a Python App with OpenAI’s Whisper Speech-to-Text API**. Medium. Disponível em: <https://medium.com/codingthesmartway-com-blog/voice-to-text-made-easy-implementing-a-python-app-with-openais-whisper-speech-to-text-api-e8f415a5f737>. Acesso em: 20 jul. 2023.
-
-‌
+</div>
