@@ -34,4 +34,5 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Consultas a inteligência artificial por comando de voz: index.md
+  - Home: index.md
+  - Consultas a inteligência artificial por comando de voz: transcribeAudio.md
