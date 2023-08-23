@@ -34,6 +34,7 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
+  - Home: index.md
   - Entregas: ./entregas/entregas.md
-  - Modelo transcrição áudio: transcricao_audio.md
+  - Modelo transcrição áudio: transcribeAudio.md
   - Scrum: ./scrum.md

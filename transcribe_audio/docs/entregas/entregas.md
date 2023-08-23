@@ -71,11 +71,6 @@ Módulo do sistema de administração encarregado de gerenciar os medicamentos, 
 
 <img src="https://s11.gifyu.com/images/SgH5I.gif" alt="Interface da klinika que consome a API" width="100%">
 
-
-## Klinika Web
-
-Módulo do sistema usada por médicos e especialista em saúde, incluindo funcionalidades de cadastro e edição.
-
 ## Cadastro de Pacientes
 Módulo do sistema onde é possivel realizar o cadastro de novos pacientes.
 
