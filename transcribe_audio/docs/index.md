@@ -10,6 +10,8 @@ Na página inicial, você encontrará um breve resumo sobre o que é o projeto K
 
 A Klinika está atualmente empenhada no desenvolvimento de um prontuário eletrônico com o objetivo de otimizar significativamente o processo de atendimento médico. Reconhecemos que já existem diversas opções de prontuários eletrônicos no mercado, mas nossa visão é oferecer uma solução abrangente e inovadora que aborde uma das principais preocupações dos médicos: o tempo e detalhamento necessários para preencher prontuários.
 
+<img src="./images/telaInicialKlinika.png" alt="Tela inicial da Klinika" width="100%">
+
 Nossa proposta é criar um prontuário eletrônico que reduza ao mínimo possível o esforço do médico durante o processo de preenchimento. Queremos simplificar a criação do prontuário, minimizando a quantidade de cliques necessários. Isso permitirá que os médicos realizem atendimentos de forma mais ágil e precisa, dedicando mais tempo aos pacientes.
 
 A plataforma Klinka Web já estava em funcionamento. Atendendo ao pedido do cliente, estamos realizando uma migração tecnológica, passando de Angular para React. O foco principal da equipe é efetuar essa migração, corrigindo eventuais problemas existentes na plataforma anterior e, ao mesmo tempo, incorporando novas funcionalidades conforme as necessidades surgem.
