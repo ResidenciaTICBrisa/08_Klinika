@@ -12,7 +12,7 @@ Com o intuito de obter uma visão abrangente da situação atual da plataforma K
 
 ## Modelo transcrição áudio
 
-Com o intuito de apresentar uma solução de inteligencia artificial para a klinika o grupo estudou os modelos ofertados pela OpenAI e construiu um modelo base de transcrição de áudio em resposta a perguntas do usuário. Para saber mais sobre o modelo [clique aqui](../transcricao_audio.md).
+Com o intuito de apresentar uma solução de inteligencia artificial para a klinika o grupo estudou os modelos ofertados pela OpenAI e construiu um modelo base de transcrição de áudio em resposta a perguntas do usuário. Para saber mais sobre o modelo [clique aqui](../transcribeAudio.md).
 
 ## Criação de API para a IA no frontend
 
