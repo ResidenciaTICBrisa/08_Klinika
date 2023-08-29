@@ -1,2 +1,2 @@
 # Atas de reuniões
-As atas de reunião são registros escritos que documentam os principais pontos discutidos, decisões tomadas, ações definidas e participantes presentes durante uma reunião. Elas servem como um documento de referência e comunicação, capturando os detalhes importantes da discussão e fornecendo um histórico claro do que foi abordado e acordado durante a reunião.aedasdasdasdasdasd
+As atas de reunião são registros escritos que documentam os principais pontos discutidos, decisões tomadas, ações definidas e participantes presentes durante uma reunião. Elas servem como um documento de referência e comunicação, capturando os detalhes importantes da discussão e fornecendo um histórico claro do que foi abordado e acordado durante a reunião.
