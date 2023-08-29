@@ -86,6 +86,12 @@ Módulo do sistema onde é possivel realizar a edição de pacientes já cadastr
 
 <img src="https://s11.gifyu.com/images/SgTD8.png" alt="Funcionalidade de edição Paciente" width="100%">
 
+## Protótipo para a página de agendamentos
+Protótipo feito no figma para a página de agendamentos de consultas feito no figma de acordo com 
+a reunião do dia 25/08/2023.
+
+<img src="https://s11.gifyu.com/images/Sg8HL.jpg" alt="Funcionalidade de edição Paciente" width="100%">
+
 
 
 
