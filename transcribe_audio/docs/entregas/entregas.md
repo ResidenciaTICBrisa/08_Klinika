@@ -44,26 +44,23 @@ Módulo do sistema de administração encarregado de gerenciar os CIDs, ou seja,
 
 <img src="https://s11.gifyu.com/images/SgHvj.gif" alt="Interface da klinika que consome a API" width="100%">
 
-
 ## Gerenciamento de Exames Físicos
 
 Módulo do sistema de administração encarregado de gerenciar os exames fisicos, ou seja, a classificação de exames, incluindo funcionalidades de listagem, cadastro, edição e exclusão.
 
 <img src="https://s11.gifyu.com/images/SgHZt.gif" alt="Interface da klinika que consome a API" width="100%">
 
-## Gerenciamento de Procedimentos Médicos 
+## Gerenciamento de Procedimentos Médicos
 
 Módulo do sistema de administração encarregado de gerenciar os procedimentos medicos, incluindo funcionalidades de listagem, cadastro, edição e exclusão.
 
 <img src="https://s11.gifyu.com/images/SgHtX.gif" alt="Interface da klinika que consome a API" width="100%">
 
-## Gerenciamento de Vacinas 
+## Gerenciamento de Vacinas
 
 Módulo do sistema de administração encarregado de gerenciar as vacias, incluindo funcionalidades de listagem, cadastro, edição e exclusão.
 
 <img src="https://s11.gifyu.com/images/SgH5s.gif" alt="Interface da klinika que consome a API" width="100%">
-
-
 
 ## Gerenciamento de Medicamentos
 
@@ -72,6 +69,7 @@ Módulo do sistema de administração encarregado de gerenciar os medicamentos, 
 <img src="https://s11.gifyu.com/images/SgH5I.gif" alt="Interface da klinika que consome a API" width="100%">
 
 ## Cadastro de Pacientes
+
 Módulo do sistema onde é possivel realizar o cadastro de novos pacientes.
 
 <img src="https://s11.gifyu.com/images/SgTD1.png" alt="Funcionalidade de cadastro Paciente" width="100%">
@@ -79,19 +77,24 @@ Módulo do sistema onde é possivel realizar o cadastro de novos pacientes.
 <img src="https://s11.gifyu.com/images/SgTDD.png" alt="Funcionalidade de cadastro Paciente" width="100%">
 
 ## Edição do Cadastro de Pacientes
-Módulo do sistema onde é possivel realizar a edição de pacientes já cadastrados.
 
+Módulo do sistema onde é possivel realizar a edição de pacientes já cadastrados.
 
 <img src="https://s11.gifyu.com/images/SgTD5.png" alt="Funcionalidade de edição Paciente" width="100%">
 
 <img src="https://s11.gifyu.com/images/SgTD8.png" alt="Funcionalidade de edição Paciente" width="100%">
 
 ## Protótipo para a página de agendamentos
-Protótipo feito no figma para a página de agendamentos de consultas feito no figma de acordo com 
+
+Protótipo feito no figma para a página de agendamentos de consultas feito no figma de acordo com
 a reunião do dia 25/08/2023.
 
 <img src="https://s11.gifyu.com/images/Sg8HL.jpg" alt="Funcionalidade de edição Paciente" width="100%">
 
+## Atualização da página de orientações da inteligência artificial da Klinika
 
+O design da página foi aprimorado, buscando inspiração no próprio ChatGPT. Além disso, agora oferecemos aos usuários a capacidade de escolher qual modelo desejam utilizar: o GPT-3 Turbo ou o GPT-4.
+
+<img src="../../assets/chat.png" alt="página aprimorada" width="100%">
 
 
