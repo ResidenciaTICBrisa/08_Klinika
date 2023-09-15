@@ -37,7 +37,6 @@ nav:
   - Home: index.md
   - Entregas: ./entregas/entregas.md
   - Modelo transcrição áudio: transcribeAudio.md
-  - Atas de reuniões: ./reunioes.md
   - Scrum: ./scrum.md
   - Atas:
     - Resumo: ./atas/resumo.md
