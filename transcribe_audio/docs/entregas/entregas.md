@@ -98,3 +98,8 @@ O design da página foi aprimorado, buscando inspiração no próprio ChatGPT. A
 <img src="../../assets/chat.png" alt="página aprimorada" width="100%">
 
 
+## Página de edição de pacientes (Novo repositório)
+
+A página foi refeita agora sem o uso do tema fusetheme e respeitando a responsividade para aparelhos móveis.
+
+<img src="../../assets/editpatient.png" alt="Nova página de edição de pacientes" width="100%">
