@@ -35,7 +35,13 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Entregas: ./entregas/entregas.md
+  - Entregas: 
+    - Entrega 1:
+      - Web Klinika: ./entregas/entrega1/entregas1_web.md
+      - Klinika Admin: ./entregas/entrega1/entregas1_admin.md
+    - Entrega 2:
+      - Web Klinika: ./entregas/entrega2/entregas2_web.md
+      - Klinika Admin: ./entregas/entrega2/entregas2_admin.md
   - Modelo transcrição áudio: transcribeAudio.md
   - Scrum: ./scrum.md
   - Atas:
