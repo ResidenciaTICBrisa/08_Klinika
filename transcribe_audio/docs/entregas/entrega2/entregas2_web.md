@@ -16,3 +16,9 @@ O design da página foi aprimorado, buscando inspiração no próprio ChatGPT. A
 A página foi refeita agora sem o uso do tema fusetheme e respeitando a responsividade para aparelhos móveis.
 
 <img src="../../../assets/editpatient.png" alt="Nova página de edição de pacientes" width="100%">
+
+## Orientações da inteligência artificial da Klinika
+
+O chat da Klinika foi aprimorado, eliminando o uso do tema fusetheme e garantindo total responsividade em dispositivos móveis. Além disso, todas as funcionalidades que antes estavam separadas foram integradas em um único servidor.
+
+<img src="https://s6.gifyu.com/images/S6AkU.gif" alt="Chat da Klinika" width="100%">
